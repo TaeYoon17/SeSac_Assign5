@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+//하이욤
 class BoardVC: UIViewController {
     @IBOutlet weak var inputBoxView: UIView!
     @IBOutlet weak var textField: UITextField!
