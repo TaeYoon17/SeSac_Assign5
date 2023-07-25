@@ -14,7 +14,7 @@ class BoardVC: UIViewController {
     @IBOutlet weak var colorBtn: UIButton!
     var outputText:String? = ""{
         didSet{
-            print(outputText)
+            print(outputText ?? "없네요...")
             if let outputText, outputText.count > 1{
                 self.boardLabel.backgroundColor = .clear
                 self.boardLabel.text = outputText
