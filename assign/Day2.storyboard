@@ -22,6 +22,7 @@
                     <connections>
                         <segue destination="XBp-st-ftb" kind="relationship" relationship="viewControllers" id="2rG-9C-nKf"/>
                         <segue destination="hoM-9g-A3G" kind="relationship" relationship="viewControllers" id="x8j-k9-pNM"/>
+                        <segue destination="OTv-v9-ooE" kind="relationship" relationship="viewControllers" id="zR1-Hw-7Sl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9j3-lM-xpV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -154,7 +155,21 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VB4-CZ-PpT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="185"/>
+            <point key="canvasLocation" x="-2" y="113"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="TP3-r6-mS2">
+            <objects>
+                <navigationController id="OTv-v9-ooE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="pencil.circle" catalog="system" id="9kd-uG-Vah"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lOO-P3-qIi">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xb9-BN-wPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2" y="826"/>
         </scene>
         <!--OH MY MOOD-->
         <scene sceneID="mcz-eb-oyd">
@@ -189,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ltz-eh-dSn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1010" y="185"/>
+            <point key="canvasLocation" x="1698" y="130"/>
         </scene>
     </scenes>
     <resources>

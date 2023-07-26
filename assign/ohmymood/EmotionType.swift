@@ -13,4 +13,14 @@ enum EmotionType:Int,CaseIterable,Hashable{
     case Normal
     case Cloudy
     case SuperCloudy
+    
+    var myKorean:String{
+        switch self{
+        case .Cloudy: return "Cloudy"
+        case .Happy: return "Happy"
+        case .Normal: return "Normal"
+        case .SuperCloudy: return "SuperCloudy"
+        case .SuperHappy: return "SuperHappy"
+        }
+    }
 }

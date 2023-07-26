@@ -17,7 +17,7 @@ class MainVC: UIViewController{
     }
     @IBAction func btnTapped(_ sender: UIButton) {
         guard let nowEmotion = EmotionType(rawValue: sender.tag) else { return }
-        emotionStatus[nowEmotion.rawValue] += 1
+        self.appendEmotion(emotion: nowEmotion, plusNum: 1)
         printOut(nowEmotion: nowEmotion)
     }
     func configure(){
@@ -29,23 +29,35 @@ class MainVC: UIViewController{
                         print("원하는 감정 타입을 찾을 수 없음")
                         return
                     }
-                    self?.emotionStatus[nowEmotion.rawValue] += num
+                    self?.appendEmotion(emotion: nowEmotion, plusNum: num)
                     self?.printOut(nowEmotion: nowEmotion)
                 }
             }
-            scoreActions.append(UIAction(title: "취소", attributes: .destructive, handler: { _ in print("취소") }))
+            scoreActions.append(UIAction(title: "초기화"){[weak self] _ in
+                guard let nowEmotion = EmotionType(rawValue: btn.tag) else {
+                    print("원하는 감정 타입을 찾을 수 없음")
+                    return
+                }
+                self?.resetEmotion(emotion: nowEmotion)
+            })
+            scoreActions.append(UIAction(title: "취소", attributes: .destructive,
+                                         handler: { _ in print("취소") }))
+            
             let btnMenu = UIMenu(title: "감정 파워 메뉴",children: scoreActions)
             btn.menu = btnMenu
         }
     }
     func printOut(nowEmotion: EmotionType){
-        switch nowEmotion{
-        case .SuperHappy: print("SuperHappy Button 횟수",terminator: ": ")
-        case .Happy: print("Happy Button 횟수",terminator: ": ")
-        case .Normal: print("Normal Button 횟수",terminator: ": ")
-        case .Cloudy: print("Cloudy Button 횟수",terminator: ": ")
-        case .SuperCloudy: print("SuperCloudy 횟수",terminator: ": ")
-        }
-        print(emotionStatus[nowEmotion.rawValue])
+        print("\(nowEmotion.myKorean) Button 횟수",terminator: ": ")
+        print(UserDefaults.standard.integer(forKey: nowEmotion.myKorean))
+    }
+    func appendEmotion(emotion:EmotionType,plusNum num:Int){
+        let nowNum = UserDefaults.standard.integer(forKey: emotion.myKorean)
+        print(nowNum + num)
+        UserDefaults.standard.set(nowNum + num, forKey: emotion.myKorean)
+    }
+    func resetEmotion(emotion:EmotionType){
+        UserDefaults.standard.set(0, forKey: emotion.myKorean)
+        print("\(emotion.myKorean)의 횟수는 0")
     }
 }
