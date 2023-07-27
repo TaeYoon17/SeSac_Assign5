@@ -29,8 +29,7 @@ class StatisticsVC: UIViewController{
         staticStackView.subviews.forEach{
             $0.layer.cornerRadius = 8
         }
-        self.scoreLabels.forEach { label in
-            label.font = .boldSystemFont(ofSize: 24)
+        self.scoreLabels.forEach { label in label.font = .boldSystemFont(ofSize: 24)
             
         }
     }
