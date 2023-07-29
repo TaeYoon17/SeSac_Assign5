@@ -254,7 +254,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="0.0" reuseIdentifier="Case3Cell" textLabel="AAy-Aj-Hc8" imageView="uP7-am-9Eg" style="IBUITableViewCellStyleDefault" id="6qg-qv-3Rw">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="0.0" reuseIdentifier="Case3Cell" textLabel="AAy-Aj-Hc8" imageView="uP7-am-9Eg" style="IBUITableViewCellStyleDefault" id="6qg-qv-3Rw">
                                 <rect key="frame" x="20" y="123.33333206176758" width="353" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6qg-qv-3Rw" id="5gm-UA-JIh">
@@ -343,6 +343,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Gh4-wi-Jwe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IbY-7Z-81r">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
